@@ -1,0 +1,76 @@
+# aisast default ignore file
+# Version control
+.git/
+.svn/
+.hg/
+
+# Virtual environments & dependencies
+.venv/
+venv/
+env/
+node_modules/
+vendor/
+bower_components/
+
+# Caches and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+out/
+target/
+bin/
+obj/
+
+# Package lock files (large generated files with false positive risks)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+Pipfile.lock
+Cargo.lock
+composer.lock
+go.sum
+
+# Minified / bundled assets
+*.min.js
+*.min.css
+*.bundle.js
+*.map
+
+# Media & Binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.exe
+*.dll
+*.dylib
+*.so
+*.wasm
+
+# Documentation & Local Logs
+*.log
+docs/_build/
+site/
+
+# Test snapshots and mock fixtures (optional to customize in .aisast.yaml)
+tests/fixtures/
+tests/mocks/

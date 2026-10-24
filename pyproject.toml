@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aisast"
+version = "0.1.0"
+description = "AI Destekli Kod Güvenliği & Sır Tarayıcı CLI (AI-Powered SAST & Secret Scanner)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Yiğit Ali Çolakoğlu", email = "yigitalicolakoglu22@gmail.com" }
+]
+keywords = [
+    "sast",
+    "security",
+    "secret-scanner",
+    "code-analysis",
+    "static-analysis",
+    "ai-security",
+    "vulnerability-scanner",
+    "cli"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "pydantic>=2.5.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+aisast = "aisast.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/yigitalic/AI-Destekli-Kod-Guvenlik"
+Repository = "https://github.com/yigitalic/AI-Destekli-Kod-Guvenlik.git"
+Documentation = "https://github.com/yigitalic/AI-Destekli-Kod-Guvenlik/tree/main/docs"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src",
+]
